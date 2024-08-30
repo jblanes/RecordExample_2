@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Employee page";
+}
+
+
+<form asp-page-handler="English"><button type="submit">English</button></form>
+<form asp-page-handler="Spanish"><button type="submit">Español</button></form>
+
+<h3>@Localizer["Entrar información del empleado"]</h3>
+
+<form method="post" asp-antiforgery="true">
+    <input type="hidden" asp-for="EmployeeData.Id" />
+    <div>
+        <label>@Localizer["Fecha de Nacimiento"]</label>
+        <input type="date" asp-for="EmployeeData.BirthDate" />
+        <span asp-validation-for="@Model.EmployeeData.BirthDate"></span>
+    </div>
+    <br />
+    <div>
+        <label>@Localizer["Salario Base ($)"]</label>
+        <input type="text" asp-for="EmployeeData.Salary" />
+        <span asp-validation-for="@Model.EmployeeData.Salary"></span>
+    </div>
+    <br />
+    
+    <button type="submit">@Localizer["Añadir Empleado"]</button>
+</form>
