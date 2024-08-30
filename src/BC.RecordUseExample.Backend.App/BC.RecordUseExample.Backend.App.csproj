@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\BC.RecordUseExample.Backend.Infrastructure\BC.RecordUseExample.Backend.Infrastructure.csproj" />
+    <ProjectReference Include="..\BC.RecordUseExample.Backend.Infrastructure\BC.RecordUseExample.Backend.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

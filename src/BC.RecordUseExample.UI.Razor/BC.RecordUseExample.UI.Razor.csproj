@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\BC.RecordUseExample.Backend.App\BC.RecordUseExample.Backend.App.csproj" />
+    <ProjectReference Include="..\BC.RecordUseExample.Backend.App\BC.RecordUseExample.Backend.App.csproj" />
   </ItemGroup>
 
 </Project>
