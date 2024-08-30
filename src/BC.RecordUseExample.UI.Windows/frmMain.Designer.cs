@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             label1 = new Label();
             dtBirthDate = new DateTimePicker();
             label2 = new Label();
             txtSalary = new TextBox();
             btnAddEmployee = new Button();
-            errProvider = new ErrorProvider(components);
             lblId = new Label();
-            ((System.ComponentModel.ISupportInitialize)errProvider).BeginInit();
+            erroMessageControl1 = new ErroMessageControl();
+            erroMessageControl2 = new ErroMessageControl();
             SuspendLayout();
             // 
             // label1
@@ -81,10 +80,6 @@
             btnAddEmployee.UseVisualStyleBackColor = true;
             btnAddEmployee.Click += btnAddEmployee_Click;
             // 
-            // errProvider
-            // 
-            errProvider.ContainerControl = this;
-            // 
             // lblId
             // 
             lblId.AutoSize = true;
@@ -95,11 +90,31 @@
             lblId.Text = "0";
             lblId.Visible = false;
             // 
+            // erroMessageControl1
+            // 
+            erroMessageControl1.FieldName = "Salary";
+            erroMessageControl1.ForeColor = Color.Red;
+            erroMessageControl1.Location = new Point(190, 128);
+            erroMessageControl1.Name = "erroMessageControl1";
+            erroMessageControl1.Size = new Size(360, 19);
+            erroMessageControl1.TabIndex = 6;
+            // 
+            // erroMessageControl2
+            // 
+            erroMessageControl2.FieldName = "BirthDate";
+            erroMessageControl2.ForeColor = Color.Red;
+            erroMessageControl2.Location = new Point(190, 75);
+            erroMessageControl2.Name = "erroMessageControl2";
+            erroMessageControl2.Size = new Size(360, 19);
+            erroMessageControl2.TabIndex = 7;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(580, 265);
+            Controls.Add(erroMessageControl2);
+            Controls.Add(erroMessageControl1);
             Controls.Add(lblId);
             Controls.Add(btnAddEmployee);
             Controls.Add(txtSalary);
@@ -109,7 +124,6 @@
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Información del Empleado";
-            ((System.ComponentModel.ISupportInitialize)errProvider).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -121,7 +135,8 @@
         private Label label2;
         private TextBox txtSalary;
         private Button btnAddEmployee;
-        private ErrorProvider errProvider;
         private Label lblId;
+        private ErroMessageControl erroMessageControl1;
+        private ErroMessageControl erroMessageControl2;
     }
 }

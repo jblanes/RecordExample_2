@@ -2,6 +2,7 @@ using BC.RecordUseExample.Backend.App;
 using BC.RecordUseExample.Backend.Domain.Commands;
 using BC.RecordUseExample.UI.Windows.ViewModels;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 
 namespace BC.RecordUseExample.UI.Windows
 {
@@ -17,12 +18,13 @@ namespace BC.RecordUseExample.UI.Windows
             _logger = logger;
 
             dtBirthDate.Value = DateTime.Now;
-             
+            ClearErrors();
+
         }
 
         private async void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            errProvider.Clear();
+            ClearErrors();
 
             var salary = TryParseNullable(txtSalary.Text);
           
@@ -49,32 +51,40 @@ namespace BC.RecordUseExample.UI.Windows
             }
         }
 
-        public static decimal? TryParseNullable(string? val)
+        private void ClearErrors()
+        {
+            foreach(Control ctrl in this.Controls)
+            {
+                if (ctrl is ErroMessageControl errCtrl)
+                {
+                    errCtrl.Clear();
+                }
+            }
+        }
+
+        private static decimal? TryParseNullable(string? val)
         {
             return decimal.TryParse(val, out decimal outValue) ? (decimal?)outValue : null;
         }
 
         private void PresentErrors(CommandResult result)
         {
-            foreach(var error in result.GetErrorMessages())
+            var errors = result.GetErrorMessages();
+            foreach (Control ctrl in this.Controls)
             {
-                SetError(txtSalary, "Salary", error);
-                SetError(dtBirthDate, "BirthDate", error);
+                if (ctrl is ErroMessageControl errCtrl)
+                {
+                    SetError(errCtrl, errors);
+                }
             }
         }
 
-        private void SetError(Control control, string fieldName, MessageText error)
+        private void SetError(ErroMessageControl errCtrl, List<MessageText> errors)
         {
-            if (error.FieldName == fieldName)
-            {
-                SetError(control, error);
-            }
+            errCtrl.SetError(errors);
         }
 
-        private void SetError(Control control,  string msg)
-        {
-            errProvider.SetError(control, msg);
-        }
+       
         
     }
 }
