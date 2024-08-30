@@ -72,7 +72,7 @@
             // 
             // btnAddEmployee
             // 
-            btnAddEmployee.Location = new Point(192, 153);
+            btnAddEmployee.Location = new Point(190, 163);
             btnAddEmployee.Name = "btnAddEmployee";
             btnAddEmployee.Size = new Size(75, 23);
             btnAddEmployee.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             erroMessageControl1.FieldName = "Salary";
             erroMessageControl1.ForeColor = Color.Red;
-            erroMessageControl1.Location = new Point(190, 128);
+            erroMessageControl1.Location = new Point(56, 128);
             erroMessageControl1.Name = "erroMessageControl1";
             erroMessageControl1.Size = new Size(360, 19);
             erroMessageControl1.TabIndex = 6;
@@ -103,16 +103,16 @@
             // 
             erroMessageControl2.FieldName = "BirthDate";
             erroMessageControl2.ForeColor = Color.Red;
-            erroMessageControl2.Location = new Point(190, 75);
+            erroMessageControl2.Location = new Point(56, 75);
             erroMessageControl2.Name = "erroMessageControl2";
-            erroMessageControl2.Size = new Size(360, 19);
+            erroMessageControl2.Size = new Size(457, 19);
             erroMessageControl2.TabIndex = 7;
             // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(580, 265);
+            ClientSize = new Size(558, 265);
             Controls.Add(erroMessageControl2);
             Controls.Add(erroMessageControl1);
             Controls.Add(lblId);
