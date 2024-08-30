@@ -1,5 +1,4 @@
-﻿using BC.RecordUseExample.Backend.Domain.Commands;
-using BC.RecordUseExample.Backend.Domain.Validation;
+﻿using BC.RecordUseExample.Backend.Domain.Validation;
 
 namespace BC.RecordUseExample.Backend.Domain.Commands.EmployeeCommands
 {

@@ -1,9 +1,9 @@
-using BC.RecordUseExample.Backend.App.Services;
 using BC.RecordUseExample.Backend.App;
+using BC.RecordUseExample.Backend.App.Services;
 using BC.RecordUseExample.Backend.Domain.Commands;
+using BC.RecordUseExample.Backend.Infrastructure.Setup;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using BC.RecordUseExample.Backend.Infrastructure.Setup;
 using Microsoft.Extensions.Logging;
 
 namespace BC.RecordUseExample.UI.Windows
@@ -23,17 +23,18 @@ namespace BC.RecordUseExample.UI.Windows
             ApplicationConfiguration.Initialize();
 
             var host = CreateHostBuilder().Build();
-            
+
             ServiceProvider = host.Services;
 
             Application.Run(ServiceProvider.GetRequiredService<frmMain>());
         }
-        
+
         static IHostBuilder CreateHostBuilder()
         {
             return Host.CreateDefaultBuilder()
-                .ConfigureServices((context, services) => {
-                   
+                .ConfigureServices((context, services) =>
+                {
+
                     services.AddLogging(builder => builder.AddConsole());
                     services.AddSqlPersistence(context.Configuration, context.HostingEnvironment.IsDevelopment());
                     services.AddScoped<IEmployeeService, EmployeeService>();

@@ -2,7 +2,6 @@ using BC.RecordUseExample.Backend.App;
 using BC.RecordUseExample.Backend.Domain.Commands;
 using BC.RecordUseExample.UI.Windows.ViewModels;
 using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
 
 namespace BC.RecordUseExample.UI.Windows
 {
@@ -27,10 +26,12 @@ namespace BC.RecordUseExample.UI.Windows
             ClearErrors();
 
             var salary = TryParseNullable(txtSalary.Text);
-          
+
             var employeeData = new EmployeeViewModel
             {
-                Id = Convert.ToInt32(lblId.Text), BirthDate = dtBirthDate.Value, Salary = salary
+                Id = Convert.ToInt32(lblId.Text),
+                BirthDate = dtBirthDate.Value,
+                Salary = salary
             };
 
             try
@@ -44,7 +45,7 @@ namespace BC.RecordUseExample.UI.Windows
 
                 MessageBox.Show("Empleado creado con éxito.");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 _logger.LogError(ex, ex.Message);
                 MessageBox.Show($"Error de sistema: {ex.Message}. Por favor trate de nuevo en unos minutos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -53,7 +54,7 @@ namespace BC.RecordUseExample.UI.Windows
 
         private void ClearErrors()
         {
-            foreach(Control ctrl in this.Controls)
+            foreach (Control ctrl in this.Controls)
             {
                 if (ctrl is ErroMessageControl errCtrl)
                 {

@@ -1,13 +1,4 @@
 ﻿using BC.RecordUseExample.Backend.Domain.Commands;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BC.RecordUseExample.UI.Windows
 {
@@ -18,7 +9,7 @@ namespace BC.RecordUseExample.UI.Windows
         public ErroMessageControl()
         {
             InitializeComponent();
- 
+
         }
 
         public void SetError(List<MessageText> errors)
