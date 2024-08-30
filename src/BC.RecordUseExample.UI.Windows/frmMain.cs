@@ -49,7 +49,7 @@ namespace BC.RecordUseExample.UI.Windows
             }
         }
 
-        public decimal? TryParseNullable(string? val)
+        public static decimal? TryParseNullable(string? val)
         {
             return decimal.TryParse(val, out decimal outValue) ? (decimal?)outValue : null;
         }
