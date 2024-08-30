@@ -1,7 +1,7 @@
-﻿using BC.RecordUseExample.Backend.App.Commands;
-using BC.RecordUseExample.Backend.App.Validation;
+﻿using BC.RecordUseExample.Backend.Domain.Commands;
+using BC.RecordUseExample.Backend.Domain.Validation;
 
-namespace BC.RecordUseExample.Backend.App.Commands.EmployeeCommands
+namespace BC.RecordUseExample.Backend.Domain.Commands.EmployeeCommands
 {
     public record CreateEmployeeCommand : ICommand<CreateEmployeeCommand>
     {

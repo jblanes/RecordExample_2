@@ -1,5 +1,5 @@
-﻿using BC.RecordUseExample.Backend.App.Commands;
-using BC.RecordUseExample.Backend.App.Commands.EmployeeCommands;
+﻿using BC.RecordUseExample.Backend.Domain.Commands;
+using BC.RecordUseExample.Backend.Domain.Commands.EmployeeCommands;
 
 namespace BC.RecordUseExample.UI.Razor.ViewModels
 {

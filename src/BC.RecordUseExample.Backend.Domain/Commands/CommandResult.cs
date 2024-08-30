@@ -1,4 +1,4 @@
-﻿namespace BC.RecordUseExample.Backend.App.Commands
+﻿namespace BC.RecordUseExample.Backend.Domain.Commands
 {
     public readonly record struct CommandResult
     {

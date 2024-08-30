@@ -1,8 +1,7 @@
-using BC.RecordUseExample.Backend.App.Commands;
+using BC.RecordUseExample.Backend.App;
 using BC.RecordUseExample.UI.Razor.Extensions;
 using BC.RecordUseExample.UI.Razor.Services;
 using BC.RecordUseExample.UI.Razor.ViewModels;
-using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Localization;
@@ -10,9 +9,9 @@ using Microsoft.Extensions.Localization;
 namespace BC.RecordUseExample.UI.Razor.Pages
 {
     public class IndexModel(
-        ILogger<IndexModel> logger, 
-        SystemCommands systemCommands, 
-        IStringLocalizer<SharedResource> localizer, 
+        ILogger<IndexModel> logger,
+        SystemCommands systemCommands,
+        IStringLocalizer<SharedResource> localizer,
         LanguageService languageService) : PageModel
     {
         private readonly LanguageService _languageService = languageService;
@@ -56,7 +55,7 @@ namespace BC.RecordUseExample.UI.Razor.Pages
                     // SetErrors es una extensión nuestra para facilitar el proceso de generar los mensajes,
                     // solo requiere el localizer para traducción, el nombre de la variable del ViewModel y el 
                     // resultado de la ejecución del comando
-                    ModelState.SetErrors(_localizer, nameof(EmployeeData), result); 
+                    ModelState.SetErrors(_localizer, nameof(EmployeeData), result);
                 }
 
                 // Regresar si hay errores

@@ -1,4 +1,4 @@
-﻿using BC.RecordUseExample.Backend.App.Commands.EmployeeCommands;
+﻿using BC.RecordUseExample.Backend.Domain.Commands.EmployeeCommands;
 using BC.RecordUseExample.Backend.Infrastructure;
 using BC.RecordUseExample.Backend.Infrastructure.DbModels;
 

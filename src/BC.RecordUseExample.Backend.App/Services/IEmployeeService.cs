@@ -1,4 +1,4 @@
-﻿using BC.RecordUseExample.Backend.App.Commands.EmployeeCommands;
+﻿using BC.RecordUseExample.Backend.Domain.Commands.EmployeeCommands;
 
 namespace BC.RecordUseExample.Backend.App.Services
 {

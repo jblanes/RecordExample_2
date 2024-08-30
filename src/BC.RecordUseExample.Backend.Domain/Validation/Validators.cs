@@ -1,4 +1,4 @@
-﻿namespace BC.RecordUseExample.Backend.App.Validation
+﻿namespace BC.RecordUseExample.Backend.Domain.Validation
 {
     internal static class Validators
     {

@@ -2,7 +2,7 @@
 
 namespace BC.RecordUseExample.UI.Razor.Services
 {
-    public  class LanguageService(IHttpContextAccessor contextAccessor)
+    public class LanguageService(IHttpContextAccessor contextAccessor)
     {
         private readonly IHttpContextAccessor _contextAccessor = contextAccessor;
 
@@ -22,7 +22,7 @@ namespace BC.RecordUseExample.UI.Razor.Services
                 );
         }
 
-        private  string BrowserCulture()
+        private string BrowserCulture()
         {
             var cultureFeature = _contextAccessor.HttpContext!.Features.Get<IRequestCultureFeature>();
             return cultureFeature!.RequestCulture.UICulture.Name[..2];

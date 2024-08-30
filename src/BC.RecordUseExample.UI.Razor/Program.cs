@@ -1,5 +1,6 @@
-using BC.RecordUseExample.Backend.App.Commands;
+using BC.RecordUseExample.Backend.App;
 using BC.RecordUseExample.Backend.App.Services;
+using BC.RecordUseExample.Backend.Domain.Commands;
 using BC.RecordUseExample.Backend.Infrastructure;
 using BC.RecordUseExample.Backend.Infrastructure.Setup;
 using BC.RecordUseExample.UI.Razor.Services;

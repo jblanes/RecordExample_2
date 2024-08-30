@@ -1,6 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using BC.RecordUseExample.Backend.Domain.Commands;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace BC.RecordUseExample.Backend.App.Commands
+namespace BC.RecordUseExample.Backend.App
 {
     public sealed class SystemCommands(IServiceProvider serviceProvider)
     {

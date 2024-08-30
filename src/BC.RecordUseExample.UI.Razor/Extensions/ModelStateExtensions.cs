@@ -1,4 +1,4 @@
-﻿using BC.RecordUseExample.Backend.App.Commands;
+﻿using BC.RecordUseExample.Backend.Domain.Commands;
 using Microsoft.Extensions.Localization;
 
 namespace BC.RecordUseExample.UI.Razor.Extensions
@@ -7,8 +7,8 @@ namespace BC.RecordUseExample.UI.Razor.Extensions
     {
         public static void SetErrors<T>(
             this Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary modelState,
-            IStringLocalizer<T> localizer, 
-            string viewModelName, 
+            IStringLocalizer<T> localizer,
+            string viewModelName,
             CommandResult result)
         {
             var errors = result.GetErrorMessages();

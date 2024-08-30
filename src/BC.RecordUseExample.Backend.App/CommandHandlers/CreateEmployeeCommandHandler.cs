@@ -1,7 +1,8 @@
-﻿using BC.RecordUseExample.Backend.App.Commands;
-using BC.RecordUseExample.Backend.App.Services;
+﻿using BC.RecordUseExample.Backend.App.Services;
+using BC.RecordUseExample.Backend.Domain.Commands;
+using BC.RecordUseExample.Backend.Domain.Commands.EmployeeCommands;
 
-namespace BC.RecordUseExample.Backend.App.Commands.EmployeeCommands
+namespace BC.RecordUseExample.Backend.App.CommandHandlers
 {
     internal class CreateEmployeeCommandHandler(IEmployeeService employeeService) : ICommandHandler<CreateEmployeeCommand>
     {
