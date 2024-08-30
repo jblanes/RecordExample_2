@@ -74,17 +74,9 @@ namespace BC.RecordUseExample.UI.Windows
             {
                 if (ctrl is ErroMessageControl errCtrl)
                 {
-                    SetError(errCtrl, errors);
+                    errCtrl.SetError(errors);
                 }
             }
         }
-
-        private void SetError(ErroMessageControl errCtrl, List<MessageText> errors)
-        {
-            errCtrl.SetError(errors);
-        }
-
-       
-        
     }
 }
