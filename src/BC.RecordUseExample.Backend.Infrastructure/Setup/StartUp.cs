@@ -7,7 +7,9 @@ namespace BC.RecordUseExample.Backend.Infrastructure.Setup
 {
     public static class Startup
     {
-        public static IServiceCollection AddSqlPersistence(this IServiceCollection services, IConfiguration configuration, bool isDevelopment)
+        public static IServiceCollection AddSqlPersistence(this IServiceCollection services, 
+            IConfiguration configuration, 
+            bool isDevelopment)
         {
             if (isDevelopment)
             {

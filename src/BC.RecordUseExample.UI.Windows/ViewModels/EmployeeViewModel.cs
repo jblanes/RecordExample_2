@@ -1,0 +1,17 @@
+﻿using BC.RecordUseExample.Backend.Domain.Commands;
+using BC.RecordUseExample.Backend.Domain.Commands.EmployeeCommands;
+
+namespace BC.RecordUseExample.UI.Windows.ViewModels
+{
+    public class EmployeeViewModel : ICreateCommandParseable<CreateEmployeeCommand>
+    {
+        public int Id { get; set; }
+        public DateTime? BirthDate { get; set; }
+        public decimal? Salary { get; set; }
+
+        public ICommand<CreateEmployeeCommand> ToCreateCommand()
+        {
+            return new CreateEmployeeCommand { Id = Id, BirthDate = BirthDate, Salary = Salary };
+        }
+    }
+}
